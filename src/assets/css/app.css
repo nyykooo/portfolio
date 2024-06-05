@@ -1,5 +1,6 @@
 :root {
     --primary-color: #d900ff;
+    --secondary-color: #000000;
     --text-color: #fff;
     --background-color: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(167,0,255,1) 100%);
 }
@@ -43,6 +44,7 @@ body {
     height: 600px;
     border-radius: 75%;
     margin-top: 20px;
+    border: 5px solid var(--primary-color);
 }
 
 .image_icons {
@@ -72,13 +74,31 @@ body {
 
 .projects {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    width: 100%;
 }
 
 .projects__buttons {
     font-size: 30px;
-    color: var(--primary-color);
+    color: var(--text-color);
     margin: 0 10px;
+    cursor: pointer;
+    width: 200px;
+    height: auto;
+    text-align: center;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background-size: 200% auto;
+    transition: background-position 0.5s;
+    background-position: right bottom;
+}
+
+.projects__buttons:hover {
+    background-position: left bottom;
+    color: white;
 }
